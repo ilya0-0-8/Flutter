@@ -1,0 +1,138 @@
+import 'package:flutter/material.dart';
+import 'package:kp/Models/ModelProduct.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+import 'LkPageSreen.dart';
+
+class UserPageSceen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+      home: UserPageScreen(),
+    );
+  }
+}
+class UserPageScreen extends StatefulWidget {
+  @override
+  UserPageScreenState createState() => UserPageScreenState();
+}
+
+class UserPageScreenState extends State<UserPageScreen> {
+  final url = Uri.parse('http://192.168.0.100:8092/api_products/products');
+  final headers = {'Content-Type': 'application/json'};
+
+  List<ModelProduct> dataList = [];
+
+  Future<void> addAnnouncement() async {
+    final response = await http.get(Uri.parse('http://192.168.0.100:8092/api_products/products'));
+    if (response.statusCode == 200) {
+      final jsonData = json.decode(response.body);
+      setState(() {
+        dataList = List<ModelProduct>.from(jsonData.map((data) => ModelProduct.fromJson(data)));
+      });
+    }
+  }
+
+
+  @override
+  void initState() {
+    super.initState();
+    addAnnouncement();
+  }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.deepPurple,
+          title: Text('Список товар',style: TextStyle(color: Colors.white)),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.account_circle),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LkPageScreen()),
+                );
+              },
+            ),
+          ],
+        ),
+        body: ListView.builder(
+          itemCount: dataList.length,
+          itemBuilder: (context, index) {
+            final data = dataList[index];
+            return Card(
+              elevation: 15,
+              child: Padding(
+                padding: EdgeInsets.all(25),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                        children: [
+                          Text(
+                            'Наименование: ',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                          Text(
+                            utf8.decode(data.name.codeUnits),
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ]
+                    ),
+                    SizedBox(height: 8),
+                    Row(
+                        children: [
+                          Text(
+                            'Описание: ',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                          Text(
+                            utf8.decode(data.description.codeUnits),
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ]
+                    ),
+                    SizedBox(height: 8),
+                    Row(
+                        children: [
+                          Text(
+                            'Цена: ${data?.price}',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                        ]
+                    ),
+                    SizedBox(height: 8),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.deepPurple,
+                        onPrimary: Colors.white,
+                      ),
+                      child: Text('Добавить в корзину'),
+                      onPressed: () {
+                        // moderData(data.id,context);
+                      },
+                    ),
+                    SizedBox(height: 8),
+                  ],
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
