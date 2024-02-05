@@ -53,8 +53,8 @@ class _EditProductState extends State<EditProduct> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
-        title: Text('Редактирование товара',style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blueGrey,
+        title: Text('Редактирование товара',style: TextStyle(color: Colors.black)),
         actions: [
           IconButton(
             icon: Icon(Icons.home),
@@ -75,14 +75,14 @@ class _EditProductState extends State<EditProduct> {
               enabled: false,
               decoration: InputDecoration(
                 labelText: 'Идентификатор товара',
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.blueGrey),
               ),
             ),
             TextField(
               controller: nameProductController,
               decoration: InputDecoration(
                 labelText: 'Наименование товара',
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.blueGrey),
               ),
             ),
             SizedBox(height: 16.0),
@@ -90,7 +90,7 @@ class _EditProductState extends State<EditProduct> {
               controller: descriptionProductController,
               decoration: InputDecoration(
                 labelText: 'Описание товара',
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.blueGrey),
               ),
             ),
             SizedBox(height: 16.0),
@@ -98,14 +98,14 @@ class _EditProductState extends State<EditProduct> {
               controller: priceProductController,
               decoration: InputDecoration(
                 labelText: 'Цена товара',
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.blueGrey),
               ),
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurple,
-                onPrimary: Colors.white,
+                backgroundColor: Colors.blueGrey,
+                onPrimary: Colors.black,
               ),
               onPressed: () {
                 editData(context);

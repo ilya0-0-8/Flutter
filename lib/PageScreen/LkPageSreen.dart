@@ -86,8 +86,8 @@ class _LkPageScreenState extends State<LkPageScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
-        title: Text('Профиль',style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blueGrey,
+        title: Text('Профиль',style: TextStyle(color: Colors.black)),
         leading: user != null && user!.roles.contains("ROLE_USER")
             ? IconButton(
           icon: Icon(Icons.arrow_back),
@@ -134,8 +134,8 @@ class _LkPageScreenState extends State<LkPageScreen> {
             SizedBox(height: 16),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurple,
-                onPrimary: Colors.white,
+                backgroundColor: Colors.blueGrey,
+                onPrimary: Colors.black,
                 fixedSize: Size(200, 35),
               ),
               onPressed: () {
@@ -152,8 +152,8 @@ class _LkPageScreenState extends State<LkPageScreen> {
               SizedBox(height: 16),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepPurple,
-                  onPrimary: Colors.white,
+                  backgroundColor: Colors.blueGrey,
+                  onPrimary: Colors.black,
                   fixedSize: Size(200, 35),
                 ),
                 onPressed: () {

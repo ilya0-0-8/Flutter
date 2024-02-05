@@ -13,7 +13,7 @@ class ManagerPageSceen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.blueGrey,
       ),
       home: ManagerPageScreen(),
     );
@@ -63,8 +63,8 @@ class ManagerPageScreenState extends State<ManagerPageScreen> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple,
-          title: Text('Список товаров', style: TextStyle(color: Colors.white)),
+          backgroundColor: Colors.blueGrey,
+          title: Text('Список товаров', style: TextStyle(color: Colors.black)),
           actions: [
             IconButton(
               icon: Icon(Icons.account_circle),
@@ -156,8 +156,8 @@ class ManagerPageScreenState extends State<ManagerPageScreen> {
                     SizedBox(height: 8),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple,
-                        onPrimary: Colors.white,
+                        backgroundColor: Colors.blueGrey,
+                        onPrimary: Colors.black,
                       ),
                       child: Text('Редактировать'),
                       onPressed: () {
@@ -177,8 +177,8 @@ class ManagerPageScreenState extends State<ManagerPageScreen> {
                     SizedBox(height: 8),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple,
-                        onPrimary: Colors.white,
+                        backgroundColor: Colors.blueGrey,
+                        onPrimary: Colors.black,
                       ),
                       child: Text('Удалить'),
                       onPressed: () {
@@ -196,7 +196,7 @@ class ManagerPageScreenState extends State<ManagerPageScreen> {
             Navigator.push(context, MaterialPageRoute(builder: (context) => CreateProductScreen()));
           },
           child: Icon(Icons.add),
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Colors.blueGrey,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       ),

@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Colors.blue, Colors.deepPurple],
+            colors: [Colors.black, Colors.blueGrey],
           ),
         ),
         child: Center(
@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: Colors.white,
-                        onPrimary: Colors.blue,
+                        onPrimary: Colors.black,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => LoginScreen()),
                         );
                       },
-                      child: Text('Авторизация', style: TextStyle(color: Colors.blue)),
+                      child: Text('Авторизация', style: TextStyle(color: Colors.black)),
                     ),
                   );
                 },
@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: Colors.white,
-                        onPrimary: Colors.deepPurple,
+                        onPrimary: Colors.black,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => RegisterScreen()),
                         );
                       },
-                      child: Text('Регистрация', style: TextStyle(color: Colors.deepPurple)),
+                      child: Text('Регистрация', style: TextStyle(color: Colors.black)),
                     ),
                   );
                 },

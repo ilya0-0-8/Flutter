@@ -14,7 +14,7 @@ class AdminPageSceen extends StatelessWidget
   {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.blueGrey,
       ),
       home: AdminPageScreen(),
     );
@@ -91,8 +91,8 @@ class AdminPageScreenScreenState extends State<AdminPageScreen>
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple,
-          title: Text('Список пользователей', style: TextStyle(color: Colors.white)),
+          backgroundColor: Colors.blueGrey,
+          title: Text('Список пользователей', style: TextStyle(color: Colors.black)),
           actions: [
             IconButton(
               icon: Icon(Icons.account_circle),
@@ -182,8 +182,8 @@ class AdminPageScreenScreenState extends State<AdminPageScreen>
                     SizedBox(height: 8),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple,
-                        onPrimary: Colors.white,
+                        backgroundColor: Colors.blueGrey,
+                        onPrimary: Colors.black,
                       ),
                       child: Text('Заблокировать'),
                       onPressed: () {
@@ -193,8 +193,8 @@ class AdminPageScreenScreenState extends State<AdminPageScreen>
                     SizedBox(height: 8),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple,
-                        onPrimary: Colors.white,
+                        backgroundColor: Colors.blueGrey,
+                        onPrimary: Colors.black,
                       ),
                       child: Text('Разблокировать'),
                       onPressed: () {
@@ -204,8 +204,8 @@ class AdminPageScreenScreenState extends State<AdminPageScreen>
                     SizedBox(height: 8),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple,
-                        onPrimary: Colors.white,
+                        backgroundColor: Colors.blueGrey,
+                        onPrimary: Colors.black,
                       ),
                       onPressed: () {
                         showDialog(

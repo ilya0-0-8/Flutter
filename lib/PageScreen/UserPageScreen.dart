@@ -10,7 +10,7 @@ class UserPageSceen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.blueGrey,
       ),
       home: UserPageScreen(),
     );
@@ -48,14 +48,13 @@ class UserPageScreenState extends State<UserPageScreen> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple,
-          title: Text('Список товар',style: TextStyle(color: Colors.white)),
+          backgroundColor: Colors.blueGrey,
+          title: Text('Список товар', style: TextStyle(color: Colors.black)),
           actions: [
             IconButton(
               icon: Icon(Icons.account_circle),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => LkPageScreen()),
-                );
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LkPageScreen()));
               },
             ),
           ],
@@ -117,8 +116,8 @@ class UserPageScreenState extends State<UserPageScreen> {
                     SizedBox(height: 8),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple,
-                        onPrimary: Colors.white,
+                        backgroundColor: Colors.blueGrey,
+                        onPrimary: Colors.black,
                       ),
                       child: Text('Добавить в корзину'),
                       onPressed: () {
@@ -132,6 +131,14 @@ class UserPageScreenState extends State<UserPageScreen> {
             );
           },
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MyCartScreen()));
+          },
+          child: Icon(Icons.shopping_cart),
+          backgroundColor: Colors.blueGrey,
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       ),
     );
   }

@@ -17,8 +17,8 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
-        title: Text('Авторизация',style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blueGrey,
+        title: Text('Авторизация',style: TextStyle(color: Colors.black)),
         automaticallyImplyLeading: false,
       ),
       body: Padding(
@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
               controller: usernameController,
               decoration: InputDecoration(
                 labelText: 'Введите имя',
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.black),
               ),
             ),
             SizedBox(height: 16.0),
@@ -39,14 +39,14 @@ class LoginScreen extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Введите пароль',
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.black),
               ),
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurple,
-                onPrimary: Colors.white,
+                backgroundColor: Colors.blueGrey,
+                onPrimary: Colors.black,
               ),
               onPressed: () {
                 login(context);

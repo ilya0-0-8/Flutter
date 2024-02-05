@@ -14,8 +14,8 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
-        title: Text('Регистрация',style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blueGrey,
+        title: Text('Регистрация',style: TextStyle(color: Colors.black)),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -25,14 +25,14 @@ class RegisterScreen extends StatelessWidget {
             TextField(
               controller: usernameController,
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.black),
                 labelText: 'Имя',
               ),
             ),
             TextField(
               controller: emailController,
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.black),
                 labelText: 'Email',
               ),
             ),
@@ -40,7 +40,7 @@ class RegisterScreen extends StatelessWidget {
             TextField(
               controller: numberPhoneController,
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.black),
                 labelText: 'Номер телефона',
               ),
             ),
@@ -48,15 +48,15 @@ class RegisterScreen extends StatelessWidget {
               controller: passwordController,
               obscureText: true,
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.black),
                 labelText: 'Пароль',
               ),
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurple,
-                onPrimary: Colors.white,
+                backgroundColor: Colors.blueGrey,
+                onPrimary: Colors.black,
               ),
               onPressed: () {
                 register(context);

@@ -23,8 +23,8 @@ class _CreateProductScreenState extends State<CreateProductScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
-        title: Text('Создание товара', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blueGrey,
+        title: Text('Создание товара', style: TextStyle(color: Colors.black)),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -34,21 +34,21 @@ class _CreateProductScreenState extends State<CreateProductScreen> {
             TextField(
               controller: nameController,
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.black),
                 labelText: 'Наименование товара',
               ),
             ),
             TextField(
               controller: descriptionController,
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.black),
                 labelText: 'Описание товара',
               ),
             ),
             TextField(
               controller: priceController,
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Colors.black),
                 labelText: 'Цена',
               ),
             ),
@@ -62,8 +62,8 @@ class _CreateProductScreenState extends State<CreateProductScreen> {
               Image.file(File(_image!.path)),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurple,
-                onPrimary: Colors.white,
+                backgroundColor: Colors.blueGrey,
+                onPrimary: Colors.black,
               ),
               onPressed: () {
                 add(context);
